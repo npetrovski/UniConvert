@@ -1,2 +1,9 @@
 language: csharp
 solution: UniConvert.sln
+
+before_install:
+  - sudo apt-get -qq update
+  - sudo apt-get install -y nsis nsis-common
+
+script:
+  - /usr/bin/makensis nsis/build.nsi
