@@ -6,5 +6,5 @@ before_install:
   - sudo apt-get install -y nsis nsis-common
 
 script:
-  - xbuild UniConvert.sln
+  - xbuild /p:Configuration=Release UniConvert.sln
   - /usr/bin/makensis nsis/build.nsi
